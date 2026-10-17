@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuickNotes API Client</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="api.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>QuickNotes Online Client</h1>
+      <p>Interactive REST API Client &amp; System Design</p>
+    </header>
+
+    <main>
+      <section class="card controls-card">
+        <div class="actions-row">
+          <button id="load-btn" type="button">Load notes</button>
+        </div>
+        <p id="status"></p>
+      </section>
+
+      <section class="card form-card">
+        <h2>Create a Note</h2>
+        <form id="note-form">
+          <div class="form-group">
+            <label for="title-input">Title (required, max 100 chars):</label>
+            <input
+              type="text"
+              id="title-input"
+              placeholder="Meeting summary..."
+              maxlength="100"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="body-input">Body (optional):</label>
+            <textarea
+              id="body-input"
+              rows="4"
+              placeholder="Action items and discussion notes..."
+            ></textarea>
+          </div>
+
+          <button id="submit-btn" type="submit">Create Note</button>
+        </form>
+      </section>
+
+      <section class="card notes-card">
+        <h2>Your Notes</h2>
+        <ul id="notes-list"></ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 QuickNotes Inc. Capstone Project.</p>
+    </footer>
+  </body>
+</html>
